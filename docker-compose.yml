@@ -68,6 +68,19 @@ services:
     networks:
       sa-network:
         ipv4_address: 172.30.0.103
+
+  data_generation:
+    build: 
+      context: ./data_generation/
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./data_generation/:/usr/src/app/
+    restart: always
+    networks:
+      sa-network:
+        ipv4_address: 172.30.0.104
+    depends_on:
+      - mqtt
       
 volumes:
   grafana_data: {}
