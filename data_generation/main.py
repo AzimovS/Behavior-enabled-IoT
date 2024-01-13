@@ -1,5 +1,5 @@
 import paho.mqtt.client as mqtt
-from random import randint
+from random import randint, random
 from json import dumps
 import time
 import configparser
@@ -19,7 +19,8 @@ time_sleep = int(config['data_generation']['time_sleep'])
 
 
 def generate_initial_locations(num):
-    return [[randint(0, 100), randint(0, 100)] for _ in range(num)]
+    # latitude and longitude
+    return [[randint(-45, 45), randint(-90, 90), random()] for _ in range(num)]
 
 
 # Function to publish area data to MQTT broker
@@ -28,16 +29,13 @@ def publish_location_data(mqtt_client, locations, source):
         topic = f"{source}/location"
         # Generate locations data
         for i in range(len(locations)):
-            locations[i][0] += randint(-1, 1)
-            locations[i][1] += randint(-1, 1)
-            payload = {"x":locations[i][0], "y":locations[i][1], "id":i}
-            # json = f'{locations:}, tags:{"id":{i}}}'
-            # payload = {"field": send_location, "tag":{"id":i}}
-            print(payload)
+            locations[i][0] += randint(-1, 1) * locations[i][2]
+            locations[i][1] += randint(-1, 1) * locations[i][2]
+            payload = {"longitude":locations[i][0], "latitude":locations[i][1], "id":i}
             payload_json = dumps(payload)
             mqtt_client.publish(topic, payload_json)
             
-            print(f"Published {topic} {i}: x:{locations[i][0]}, y:{locations[i][1]}")
+            print(f"Published {topic} {i}: longitude:{locations[i][0]}, latitude:{locations[i][1]}")
         
         time.sleep(time_sleep)  # Breaks between publishing data (defined in config)
 
