@@ -81,6 +81,19 @@ services:
         ipv4_address: 172.30.0.104
     depends_on:
       - mqtt
+
+  notification:
+    build: 
+      context: ./notification/
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./notification/:/usr/src/app/
+    restart: always
+    networks:
+      sa-network:
+        ipv4_address: 172.30.0.105
+    depends_on:
+      - influxdb
       
 volumes:
   grafana_data: {}
