@@ -19,8 +19,7 @@ time_sleep = int(config['data_generation']['time_sleep'])
 
 
 def generate_initial_locations(num):
-    # latitude and longitude
-    return [[randint(-45, 45), randint(-90, 90), random()] for _ in range(num)]
+    return [[randint(-150, 150), randint(-60, 60), random()] for _ in range(num)]
 
 
 # Function to publish area data to MQTT broker

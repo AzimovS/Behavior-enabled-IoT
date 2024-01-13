@@ -15,7 +15,7 @@ BUCKET = "locations"
 org = "archiwizards"
 token = "sa_token"
 url = "172.30.0.102:8086"
-threshold_distance = 30  # threshold distance in kilometers
+threshold_distance = 100  # threshold distance in kilometers
 
 client = influxdb_client.InfluxDBClient(
     url=url,
