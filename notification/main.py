@@ -91,5 +91,4 @@ if __name__ == "__main__":
 
         check_proximity(group_animals, group_boats, threshold_distance)
         check_proximity(group_animals, group_trawlers, threshold_distance)
-        check_proximity(group_boats, group_trawlers, threshold_distance)
         sleep(5)
