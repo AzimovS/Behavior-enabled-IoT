@@ -1,6 +1,6 @@
 # Behaviour Enabled IOT for Conservation Of Marine Animals
 
-[![logo](/assets/univaqlogo.png)]
+![logo](/assets/univaqlogo.png)
 
 **Group Members:**
 1. Sherkhan Azimov
