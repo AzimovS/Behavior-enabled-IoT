@@ -1,8 +1,15 @@
 > **Group Members:**
 > Sherkhan Azimov
+> 
 > Aarohi Garg
+> 
 > Vidya Dhopate
+> 
 > Jacob White
+>
+> **Submitted To:**
+>
+> Prof. Henry Muccini
 
 
 To promote behaviour-enabled IOT, our application leverages the power of IOT devices to track, analyse, and visualize animal behaviour as well as the behaviour of industrial trawlers and locaal boats.
