@@ -16,4 +16,4 @@ Often, endangered marine animals are found as by-catch in industrial trawlers wh
 
 
 The overview of the concept of implementing our project can be found below:
-[![conceptual architecture](/Architectural Diagrams (UML)/Conceptual Architecture Diagram.jpg)]
+[![conceptual architecture](/assets/concept.jpg)]
