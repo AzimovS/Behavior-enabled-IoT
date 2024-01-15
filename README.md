@@ -1,4 +1,4 @@
-# Behaviour Enabled IOT for Conservation Of Marine Animals
+# Ocean Sentinel: Behaviour Enabled IOT for Conservation Of Marine Animals
 
 <p align="center">
   <img src="assets/dashboard.png" alt="demo" width="75%"/>
