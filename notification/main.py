@@ -55,7 +55,7 @@ def check_proximity(group1, group2, threshold):
         for item2 in group2:
             distance = calculate_distance(item1, item2)
             if distance < threshold:
-                alert_message = f"ALERT: {item1[2].split('/')[0]} with id {item1[0]} is close to {item2[2].split('/')[0]} with id {item1[0]}. Distance: {distance} km"
+                alert_message = f"ALERT: {item1[2].split('/')[0]} with id {item1[0]} is close to {item2[2].split('/')[0]} with id {item2[0]}. Distance: {distance} km"
                 send_telegram_alert(alert_message)
 
 
